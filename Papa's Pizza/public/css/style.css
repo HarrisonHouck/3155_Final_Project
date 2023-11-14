@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    background-image: url(../images/wallpaper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+a {
+    color: #edf0f1;
+    text-decoration: none;
+    list-style: none;
+}
+
+li {
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    align-content: center;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-bottom: 5px;
+    margin-top: auto;
+}
+
+.logo {
+    border-radius: 5px;
+    width: 150px;
+    margin-left: 25px;
+    margin-top: 1px;
+    scale: .9;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+}
+
+.navlinks {
+    display: flex;
+    
+}
+
+header {
+    display: flex;
+    height: 100px;
+    width: 100%;
+    background-color: black;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+.sale-popup {
+    background-color: #ffc107;
+    color: #333;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.category {
+    display:inline-block;
+    border-radius: 5px;
+    background-color: #fefbfb;
+    font-size: 32px;
+    font-weight: bold;
+    font-style: italic;
+    color: darkslategray;
+    margin: 0px;
+    padding: 5px;
+    margin-left: 515px;
+    text-decoration: underline;
+}
+
+#meat_lovers {
+    margin-bottom: 15px;
+}
+
+#kids_menu{
+    margin-bottom: 15px;
+}
+
+#menu, #cart {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    display:flex;
+}
+
+.main_title {
+    font-size: 48px;
+    display:inline-block;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    font-weight: bold;
+    color: darkslategray;
+    margin: 0px;
+    padding: 5px;
+    margin-left: 400px;
+}
+
+.pizza {
+    margin: 0px;
+    border-radius: 5px;
+}
+
+.dish {
+    padding: 10px;
+    margin: 10px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin-left: 100px;
+}
+
+.dish:hover {
+    transform: scale(1.05);
+}
+
+.logo:hover{ 
+    transform: scale(1.05);
+}
+
+.title {
+    color: darkslategray;
+    text-align: center;
+    padding: 5px;
+    padding-top: 10px;
+}
+
+.description {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding: 5px;
+}
+
+.price {
+    font-style: italic;
+    padding: 5px;
+    padding-bottom: 0px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: whitesmoke;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* #cart {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} */
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* #checkoutModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+} */
+
+/* .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10% auto;
+    width: 50%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} */
+
+.close {
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.last_menu{
+    margin-bottom: 25px;
+
+}
+
+footer {
+    position: absolute;
+    background-color: black;
+    color: whitesmoke;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    height: 5%;
+    width: 200%;
+}
+ .navlinks, .footerlinks {
+     display:flex;
+}
+
+#salePopup{
+    text-align: center;
+}
+.footer_text {
+    margin-bottom: 5px;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.twitter {
+    width: 25px;
+    margin-top: 3px;
+    scale: 1.4;
+}
+.instagram {
+    width: 25px;
+    margin-top: 3px;
+    scale: .9;
+  }
+
+#fullscreenPopup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.popupContent {
+    position: relative;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.about-section {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+.about-section h2 {
+    color: #e44d26; /* Papa's Pizza brand color */
+}
+
+.about-text {
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: white;
+}
+
+#about_title, .about_title{
+    font-size: 48px;
+    color: white;
+    text-align: center;
+  
+}
+.wip {
+    font-size: 48px;
+    color: white;
+    text-align: center;
+}
+.founder-image {
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.founder-info {
+    font-style: italic;
+    color: #777;
+    color: white;
+    font-weight: bold;
+}
+
+.contact-info {
+    margin: auto;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+
+}
+

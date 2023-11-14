@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="icon" type="image/x-icon" href="public/images/logo.jpg">
+
+    <title>Papa's Pizza</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img class="logo" src="public/images/logo.jpg" alt="Logo"></a>
+         <nav>
+            <ul class="navlinks">
+               <li class="navlinks"><a href="build.html">Build Your Own</a></li>
+            </ul>
+            <section id="cart">
+                <ul id="cartItems"></ul>
+               
+                <button onclick="openCheckout()">Checkout<p>Total: $<span id="total">0.00</span></p></button>
+            </section>
+         </nav>
+       
+    </header>
+<!-- popup -->
+<div id="fullscreenPopup">
+    <div class="popupContent">
+        <span class="closeBtn" onclick="closeFullscreenPopup()">&times;</span>
+        <p>🦃 Thanksgiving Offer: All prices are discounted, GOD DID! 🍕</p>
+    </div>
+</div>
+
+    <br><h3 class="main_title">Papa's Pizza Menu</h3>
+    <br><br><br><span class="category">Vegetarian</span><br>
+    <section id="menu">
+        <div class="dish">
+            <img class="pizza" src="public/images/pizza1.jpg" alt="Pizza Margherita">
+            <h3 class="title">Margherita Pizza</h3>
+            <p class="description">Classic Margherita with tomato and mozzarella.</p>
+            <p class="description">Calories per slice: 230</p>
+            <p class="price">Price: $7.99</p>
+               
+            <br>
+            <button onclick="addToCart('Margherita Pizza', 7.99)">Add to Cart</button>
+        </div>
+        
+        <div class="dish">
+            <img class="pizza" src="public/images/pizza2.jpg" alt="Pizza Margherita">
+            <h3 class="title">Veggie Pizza</h3>
+            <p class="description">Jam packed with all your favorite veggies.</p>
+            <p class="description">Calories per slice: 270</p>
+            <p class="price">Price: $8.99</p>
+            <br>
+            <button onclick="addToCart('Veggie Pizza', 8.99)">Add to Cart</button>
+        </div>
+
+        <div class="dish">
+            <img class="pizza" src="public/images/pizza3.jpg" alt="Pizza Margherita">
+            <h3 class="title">Cheese Pizza</h3>
+            <p class="description">Cheese that melts in your mouth.</p>
+            <p class="description">Calories per slice: 240</p>
+            <p class="price">Price: $6.99</p>
+            <br>
+            <button onclick="addToCart('Cheese Pizza', 6.99)">Add to Cart</button>
+        </div>
+    </section>
+
+    <span class="category" id="meat_lovers">Meat Lover</span><br>
+    <section id="menu">
+        <div class="dish">
+            <img class="pizza" src="public/images/pizza4.jpg" alt="Pepperoni Pizza">
+            <h3 class="title">Pepperoni Pizza</h3>
+            <p class="description">Made of pizza crust, pizza sauce, cheese, and pepperoni.</p>
+            <p class="description">Calories per slice: 260</p>
+            <p class="price">Price: $7.99</p>   
+            <br>
+            <button onclick="addToCart('Pepperoni Pizza', 7.99)">Add to Cart</button>
+        </div>
+        
+        <div class="dish">
+            <img class="pizza" src="public/images/pizza5.jpg" alt="Meat Lover's Pizza">
+            <h3 class="title">Meat Lover's Pizza</h3>
+            <p class="description">Tons of sausage, pepperoni and crumbled bacon.</p>
+            <p class="description">Calories per slice: 300</p>
+            <p class="price">Price: $10.99</p>
+            <br>
+            <button onclick="addToCart('Meat Lover\'s Pizza', 10.99)">Add to Cart</button>
+        </div>
+
+        <div class="dish">
+            <img class="pizza" src="public/images/pizza6.jpg" alt="Chicken Pizza">
+            <h3 class="title">Chicken Pizza</h3>
+            <p class="description">Chicken and pizza, it's that simple.</p>
+            <p class="description">Calories per slice: 240</p>
+            <p class="price">Price: $9.99</p>
+            <br>
+            <button onclick="addToCart('Chicken Pizza', 9.99)">Add to Cart</button>
+        </div>
+    </section>
+
+    <span class="category" id="kids_menu">Kid's Menu</span><br>
+    <section id="menu" class="last_menu">
+        <div class="dish">
+            <img class="pizza" src="public/images/pizza7.jpg" alt="Tiny Pepperoni Pizza">
+            <h3 class="title">Kid's Pepperoni Pizza</h3>
+            <p class="description">Tiny pizza with tinier pepperoni.</p>
+            <p class="description">Calories per slice: 90</p>
+            <p class="price">Price: $4.99</p>   
+            <br>
+            <button onclick="addToCart('Tiny Pepperoni Pizza', 4.99)">Add to Cart</button>
+        </div>
+        
+        <div class="dish">
+            <img class="pizza" src="public/images/pizza8.jpg" alt="Cute Pizza">
+            <h3 class="title">Mini Pizza</h3>
+            <p class="description">The cutest pizza with a pack of bite sized pizza.</p>
+            <p class="description">Calories per slice: 40</p>
+            <p class="price">Price: $3.99</p>
+            <br>
+            <button onclick="addToCart('Mini Pizza', 3.99)">Add to Cart</button>
+        </div>
+
+        <div class="dish">
+            <img class="pizza" src="public/images/pizza9.jpg" alt="Cheese Pizza">
+            <h3 class="title">Kid's Cheese Pizza</h3>
+            <p class="description">Small cheese pizza, it's that simple, no really.</p>
+            <p class="description">Calories per slice: 60</p>
+            <p class="price">Price: $4.99</p>
+            <br>
+            <button onclick="addToCart('Kid\'s Cheese Pizza', 4.99)">Add to Cart</button>
+        </div>
+    </section>
+   
+
+    <footer>
+      <ul class="footerlinks">
+         <li class="footerlinks"><a href="index.html" class="footer_text">&copy; Papa's Pizza</a></li>
+         <li class="footerlinks"><a href="about.html" class="footer_text">About</a></li>
+         <li class="footerlinks"><a href="contact.html" class="footer_text">Contact</a></li>
+         <li class="footerlinks"><a target="_blank" href="https://twitter.com"><img class="twitter" src="public/images/twitter.png" alt="twitter"></a></li>
+         <li class="footerlinks"><a target="_blank" href="https://instagram.com"><img class="instagram" src="public/images/instagram.png" alt="instagram"></a></li>
+      </ul>
+   </footer>
+   <script src="public/javascript/script.js"></script>
+  </body>
+  </html>
+
+   
