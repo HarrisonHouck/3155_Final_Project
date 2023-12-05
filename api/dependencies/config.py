@@ -3,6 +3,6 @@ class conf:
     db_name = "pizza_restaurant_api2"
     db_port = 3306
     db_user = "root"
-    db_password = "andrew2001"
+    db_password = ""
     app_host = "localhost"
     app_port = 8000
