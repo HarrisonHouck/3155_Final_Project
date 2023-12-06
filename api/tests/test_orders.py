@@ -14,18 +14,14 @@ def db_session(mocker):
 
 
 def test_create_order(db_session):
-    # Create a sample order
-    order_data = {
-        "customer_name": "John Doe",
-        "description": "Test order"
-    }
-
-    order_object = model.Order(**order_data)
-
-    # Call the create function
-    created_order = controller.create(db_session, order_object)
-
-    # Assertions
-    assert created_order is not None
-    assert created_order.customer_name == "John Doe"
-    assert created_order.description == "Test order"
+    response = client.post(
+        "/orders/",
+        json={
+            "customer_name": "John Doe",
+            "pizzas": [1, 2]
+        }
+    )
+    assert response.status_code == 200
+    assert response.json()["customer_name"] == "John Doe"
+    assert response.json()["pizzas"][0]["id"] == 1
+    assert response.json()["pizzas"][1]["id"] == 2
